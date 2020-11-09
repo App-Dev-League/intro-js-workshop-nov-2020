@@ -1,0 +1,8 @@
+var article = prompt("enter an article")
+var noun = prompt("enter a noun")
+var adj = prompt("enter an adjective")
+var verb = prompt("enter a verb")
+var article2 = prompt("enter an article")
+var adj2 = prompt("enter an adjective")
+var noun2 = prompt("enter another noun")
+console.log(article+ " "+ adj + " " + noun + " " + verb + " " + article2 + " " + adj2 + " " + noun2)
