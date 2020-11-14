@@ -1,6 +1,4 @@
-/* 
- * Input a random number between 0 - 3 to get a random distribution
- */
+//Function thag gets a random number
 function getAction(number) {
 	if(number < 1) {
 		return "rock";
@@ -11,10 +9,7 @@ function getAction(number) {
 	}
 }
 
-/* 
- * Determines winner based on the user's choice and computer's choice
- * Returns true if the user won, false if the computer won
-*/
+//Determines the winner and accepts "parameters"
 function isWinner(user, computer) {
 	if(user == "rock" && computer == "scissors") {
 		return true;
@@ -27,22 +22,19 @@ function isWinner(user, computer) {
 	}
 }
 
-// Infinite loop until user ends
+//Game Logic
 ended = false;
 while(!ended) {
 	input = prompt("Rock, paper, scissors, or end?");
-	/*
-	 * If user clicks cancel on prompt or types end, set end condition
-	 * Also display end message
-	 */
+	// If the user types end, then terminate the program
 	if(input == null || input.toLowerCase() == "end") {
 		ended = true;
 		alert("Thanks for playing rock-paper-scissors with us!")
 	} else {
-		input = input.toLowerCase(); // Sanitize input by converting to lowercase (recommended)
-		computerChoice = getAction(Math.random() * 3); // Random number from 0 to 1 times 3 is random number from 0 to 3
+		input = input.toLowerCase();
+		computerChoice = getAction(Math.random() * 3);
 
-		// Check for tie or winner
+		// Checks if there is a win or tie, by calling the isWinner function
 		if(input == computerChoice) {
 			alert(`You chose ${input}, and the computer chose ${computerChoice}. You tied.`);
 		} else if(isWinner(input, computerChoice)) {
