@@ -1,4 +1,4 @@
-//Function thag gets a random number
+//Function that gets a random number
 function getAction(number) {
 	if(number < 1) {
 		return "rock";
